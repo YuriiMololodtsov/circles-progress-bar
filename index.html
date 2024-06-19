@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div class="progress-ring-container">
+            <svg class="progress-ring" width="60" height="60">
+                <circle class="progress-ring__circle-bg" stroke="lightgrey" stroke-width="1" fill="transparent" r="28" cx="30" cy="30"/>
+                <circle class="progress-ring__circle" stroke="purple" stroke-width="2" fill="transparent" r="28" cx="30" cy="30"/>
+            </svg>
+            <span class="progress-ring__text">0/7</span>
+        </div>
+        <div class="text-wrapper">
+            <p class="tab-checklist">Чеклист</p>
+            <p class="title">Выполнено: 0 из 7 действий</p>
+            <p class="subtitle">Следующее действие: Созвониться с клиентом до 23.05.24 12:00</p>
+        </div>
+        <button class="button" type="button">Открыть чеклист</button>
+    </div>
+
+</body>
+</html>

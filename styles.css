@@ -1,0 +1,103 @@
+:root {
+    --progress-percentage: 5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+}
+
+.container {
+    width: 743px;
+    height: 91px;
+    border-radius: 10px;
+    background: #3579F5;
+    display: flex;
+    align-items: center;
+    padding: 16px 22px 15px 22px;
+    justify-content: space-between;
+}
+
+.progress-ring-container {
+    position: relative;
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+}
+
+.progress-ring__circle {
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+}
+
+.progress-ring__circle:first-of-type {
+    stroke: #FFFFFF80;
+    opacity: 0.3;
+}
+
+.progress-ring__circle:last-of-type {
+    stroke: #fff;
+    stroke-dasharray: 175.84;
+    stroke-dashoffset: calc(175.84 * (1 - var(--progress-percentage) / 100));
+}
+
+.progress-ring__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-left: 16px;
+    flex-grow: 1;
+}
+
+.tab-checklist {
+    background-color: #2364DB;
+    padding: 2px 13px 2px 13px;
+    font-size: 12px;
+    max-width: max-content;
+    border-radius: 40px;
+}
+
+.title {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.button {
+    border: none;
+    padding: 10px 32px 10px 32px;
+    border-radius: 6px;
+    background-color: #F4F8FF;
+    max-height: 40px;
+    color: #4777ED;
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 0;
+    cursor: pointer;
+}
